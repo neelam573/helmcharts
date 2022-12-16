@@ -1,0 +1,9 @@
+{{- if eq .Values.ConfigMap.Enabled true }} 
+attendance:
+    api_port: {{ .Values.ConfigMap.api_port }}
+mysql: 
+    db_name: {{ .Values.ConfigMap.db_name }}
+    host: {{ .Values.ConfigMap.host }}
+    username: {{ .Values.ConfigMap.username }}
+    password: {{ .Values.ConfigMap.password }}
+{{- end }}
